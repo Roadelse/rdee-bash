@@ -7,7 +7,7 @@ scriptDir=$(dirname $scriptPath)
 
 source $scriptDir/_components/_basic.sh
 source $scriptDir/_components/_io.sh
-source $scriptDir/_components/_os.sh
+source $scriptDir/_components/_sh.sh
 source $scriptDir/_components/_time.sh
 source $scriptDir/_components/_array.sh
 source $scriptDir/_components/_string.sh

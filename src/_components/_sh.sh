@@ -35,8 +35,17 @@ get_fds_in_rstArray(){
 
 
 
-
-
-
-
+function rmep() {
+    # Last Update: @2024-09-04 10:57:42
+    # ---------------------------------
+    # remove environment path element, with seperator of :
+    # $1: PATH, $2: detailed path
+    local rst
+    rst=$(echo :${!1} | sed "s|:$2||g")
+    if [[ "$rst" =~ ^: ]]; then
+        export $1="${rst:1}"
+    else
+        export $1="${rst}"
+    fi
+}
 
