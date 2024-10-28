@@ -6,11 +6,13 @@
 #    script rather than in CLI
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-    echo "The script is being executed, Please source the rdee.sh!"
+    echo "The script can only be sourced rather than executed"
     exit 0
-elif [[ `basename ${BASH_SOURCE[1]}` != "rdee.sh" ]]; then
-    echo "The script can only be sourced from rdee.sh, exit"
-    return 0
+fi
+
+if [[ -n "$1" && "$1" == "unload" ]]; then
+    unset -f sf_startswith sf_endswith
+    return
 fi
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

@@ -1,3 +1,7 @@
-/deploy/export/
 
+/deploy/export*
+
+ade-*
+ade.*
 wf.*.md
+.vscode/
