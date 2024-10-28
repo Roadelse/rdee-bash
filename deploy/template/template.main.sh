@@ -1,3 +1,3 @@
 
 
-source <<deploydir>>/../src/lib/source.rdee-bash.sh load
+source <<projdir>>/src/lib/source.rdee-bash.sh load
