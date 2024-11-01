@@ -5,7 +5,9 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 fi
 
 if [[ -n "$1" && "$1" == "unload" ]]; then
-    qR
+    if [[ -n "$__rdeebash_file__" ]]; then
+        qR
+    fi
     unset -f iR qR
     return
 fi

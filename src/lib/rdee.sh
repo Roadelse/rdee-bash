@@ -7,13 +7,15 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 fi
 
 if [[ -n "$1" && "$1" == "unload" ]]; then
+    echo $__rdeebash_filedir__
     source $__rdeebash_filedir__/components/basic.sh unload
     source $__rdeebash_filedir__/components/io.sh unload
     source $__rdeebash_filedir__/components/sh.sh unload
     source $__rdeebash_filedir__/components/time.sh unload
     source $__rdeebash_filedir__/components/array.sh unload
-    source $__rdeebash_filedir__/components/string.s unload
+    source $__rdeebash_filedir__/components/string.sh unload
 
+    unset __rdeebash_file__ __rdeebash_filedir__
     return
 fi
 
@@ -29,6 +31,5 @@ source $__rdeebash_filedir__/components/time.sh
 source $__rdeebash_filedir__/components/array.sh
 source $__rdeebash_filedir__/components/string.sh
 
-unset __rdeebash_file __rdeebash_filedir__
 
 # export RDEE_LOADED=1
